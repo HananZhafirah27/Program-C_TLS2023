@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    //membuat program steam vacuum portable//
+    
+    bool switch_on_heat=1;
+    bool switch_off_heat=0;
+    float sensor_suhu;
+    bool lampu_nyala=1;
+    bool lampu_mati=0;
+    bool switch_vacuum;   
+   
+    
+    cout<<"On/Off?: (Tulis Angka 1 Untuk On, Tulis Angka 0 untuk Off) ";
+    cin>>switch_vacuum;
+    
+    if (switch_vacuum=1){
+            cout<<" \n";
+            switch_on_heat;
+            
+	        cout<<"Masukkan Suhu Panas dari Pemanas Air: (tidak usah pakai derajat)\n";
+	        cin>> sensor_suhu;
+	    if ( sensor_suhu<120){
+	        cout<<"----- (Heater masih menyala)\n";
+	        lampu_nyala;
+	        cout<<"----------(Lampu Menyala)\n";
+	        
+	    }
+	    else if(sensor_suhu>=120){
+	        cout<<"-------(Heater mati)\n";
+	        cout<<"----------(lampu mati)\n";
+	        cout<<"------------(Resistor Memutus Arus)\n";
+	        lampu_mati;
+	    
+	        switch_off_heat;
+	    }
+	    
+    }
+    else if(switch_vacuum=0){
+	        cout<<"Vacuum Mati";
+}}
